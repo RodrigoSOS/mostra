@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Empinar Moto</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=600 height=600 style="width: 600px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/PipaMesmo.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/PipaMesmo.data",
+        frameworkUrl: "Build/PipaMesmo.framework.js",
+        codeUrl: "Build/PipaMesmo.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Cnnct",
+        productName: "Empinar Moto",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+        <div>
+          <a href="../embaixadinha/index.html"> embaixadinha</a>
+          <a href="../moto/index.html"> moto</a>
+          <a href="../pipa/index.html"> pipa</a>
+      </div>
+  </body>
+</html>
