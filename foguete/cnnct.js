@@ -1,15 +1,11 @@
 var myGameInstance = null;
-script.onload = () => {
-    createUnityInstance(canvas, config, (progress) => {...}).then((unityInstance) => {
-		myGameInstance = unityInstance;
-	}
-}
-	
+var unityInstance = window.unityInstance = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
+
 	
 function console(string input){
-	myGameInstance.SendMessage('JSHook', 'console', input);
+	unityInstance.SendMessage('JSHook', 'console', input);
 }
 function Stop() {
 	console.log("call Stop");
-	myGameInstance.SendMessage('JSHook', 'Stop');
+	unityInstance.SendMessage('JSHook', 'Stop');
 }
