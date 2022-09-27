@@ -3,6 +3,7 @@ script.onload = () => {
     createUnityInstance(canvas, config, (progress) => {...}).then((unityInstance) => {
 		myGameInstance = unityInstance;
 	}
+}
 	
 	
 function console(string input){
