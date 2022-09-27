@@ -9,21 +9,9 @@
     </style>
   </head>
   <body style="text-align: center; margin: 0px;">
-    <canvas id="unity-canvas"  style="width: 100vw; height: 100vh; background: #231F20; padding: none;" ></canvas>
+    <canvas id="unity-canvas"  style="width: 100vw; height: 100vh; background: #231F20; padding: 0px;" ></canvas>
     <script src="Build/foguete.loader.js"></script>
-    <script>
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/foguete.data",
-        frameworkUrl: "Build/foguete.framework.js",
-        codeUrl: "Build/foguete.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "Cnnct",
-        productName: "Empinar Moto",
-        productVersion: "1.0",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
-    </script>
+
     <script src="cnnct.js"></script>
   </body>
 </html>
