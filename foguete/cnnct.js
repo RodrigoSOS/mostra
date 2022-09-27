@@ -3,6 +3,12 @@ script.onload = () => {
     createUnityInstance(canvas, config, (progress) => {...}).then((unityInstance) => {
 		myGameInstance = unityInstance;
 	}
-function stop() {
-	myGameInstance..SendMessage('JSHook', 'Stop');
+	
+	
+function console(string input){
+	myGameInstance.SendMessage('JSHook', 'console', input);
+}
+function Stop() {
+	console.log("call Stop");
+	myGameInstance.SendMessage('JSHook', 'Stop');
 }
