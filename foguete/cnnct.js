@@ -1,7 +1,7 @@
 var myGameInstance = null;
 //var unityInstance = window.unityInstance = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
 script.onload = () => {
-    createUnityInstance(document.querySelector("#unity-canvas"), {
+    myGameInstance = createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/foguete.data",
         frameworkUrl: "Build/foguete.framework.js",
         codeUrl: "Build/foguete.wasm",
@@ -17,10 +17,10 @@ script.onload = () => {
 var unityInstance = window.document.getElementById("unity-canvas");
 	
 function com(input){
-	unityInstance.SendMessage('JSHook', 'console', input);
+    myGameInstance.SendMessage('JSHook', 'console', input);
 	
 }
 function Stop() {
 	console.log("call Stop");
-	unityInstance.SendMessage('JSHook', 'Stop');
+    myGameInstance.SendMessage('JSHook', 'Stop');
 }
