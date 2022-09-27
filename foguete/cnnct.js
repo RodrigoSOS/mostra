@@ -1,6 +1,6 @@
 //var myGameInstance = null;
 //var unityInstance = window.unityInstance = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
-var myGameInstance = myGameInstance = createUnityInstance(document.querySelector("#unity-canvas"), {
+var myGameInstance = createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/foguete.data",
         frameworkUrl: "Build/foguete.framework.js",
         codeUrl: "Build/foguete.wasm",
