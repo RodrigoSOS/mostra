@@ -15,7 +15,7 @@ var myGameInstance = createUnityInstance(document.querySelector("#unity-canvas")
 */
 
 var myGameInstance = null;
-script.onload = () => {
+{
     createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/foguete.data",
         frameworkUrl: "Build/foguete.framework.js",
